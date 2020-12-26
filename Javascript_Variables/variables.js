@@ -31,18 +31,21 @@ console.log(typeof(fullPrice));
 // Bonus - The tax and price should be inputted by the user
 
 var price=prompt(" Enter the price for one phone in $:");
+var priceInt=parseInt(price);
 var taxRate=prompt("Enter the tax rate per one phone in %");
+var taxRateInt=parseInt(taxRate);
 var phoneQuantity=30;
 var fullPrice$=null;
-fullPrice$=(price*(taxRate/100))*phoneQuantity;
+fullPrice$=(priceInt*(taxRateInt/100))*phoneQuantity;
 document.write("<br> <br> The full price of all the 30phones with the tax calculated is: "+ fullPrice$ + " $");
 console.log(fullPrice$);
 
 // Exercise 3 - Calculate the area of a circle with the radius got as user input
 
 var circleRadius=prompt("Enter the circle radius in meters:");
+var circleRadiusInt=parseInt(circleRadius);
 var pi=3.14;
 var area=null;
-area=(circleRadius*circleRadius)*pi;
-document.write("<br> <br>The are of the circle with a radius of: " + circleRadius + " is " + area+" m");
+area=(circleRadiusInt*circleRadiusInt)*pi;
+document.write("<br> <br>The are of the circle with a radius of: " + circleRadiusInt + " is " + area+" m");
 console.log(area);
