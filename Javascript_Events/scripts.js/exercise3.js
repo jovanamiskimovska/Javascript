@@ -15,6 +15,10 @@ function getValues(){
   str3=email.value;
   str4=password.value;
   return printString(str1,str2,str3,str4);
+  fName.innerHTML="";
+  lName.innerHTML="";
+  email.innerHTML="";
+  password.innerHTML="";
 }
 
 button.addEventListener("click",getValues);

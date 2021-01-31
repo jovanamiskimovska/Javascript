@@ -6,20 +6,22 @@ $(document).ready(function(){
 
     function printAverage(num1,num2,num3){
         let sum=num1+num2+num3;
-        console.log(sum)
+        console.log(sum);
         let average=(sum/3); 
         if(average>=10){
-            button.after(`<h1 id='h1-bigger'>The average is: ${average}</h1>`);
-            $("#h1-bigger").css("color","green"); // moze i so h1:first bez id, ama sakav i vaka da probam
+            $("h1").remove();
+            button.after(`<h1>The average is: ${average}</h1>`);
+            $("h1").css("color","green"); 
         } 
         else{
-            button.after(`<h1 id='h1-smaller'>The average is: ${average}</h1>`);
-            $("#h1-smaller").css("color","red");
+            $("h1").remove();
+            button.after(`<h1>The average is: ${average}</h1>`);
+            $("h1").css("color","red");
         }
        
     }
 
     button.click(function(){
-        printAverage(parseInt(input1.val()),parseInt(input2.val()),parseInt(input3.val()));
+        printAverage(parseFloat(input1.val()),parseFloat(input2.val()),parseFloat(input3.val()));
     })
 })

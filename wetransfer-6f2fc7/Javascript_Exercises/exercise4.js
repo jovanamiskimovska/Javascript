@@ -1,33 +1,17 @@
-$(document).ready(function(){
-    let text=$("#text");
-    let button=$("#button");
-    let select=$(".selectOptions");
-    select.after("<p id='paragraph'></p>");
-    let paragraph=$("#paragraph");
-
-    
-    button.click(function() {
-        paragraph.text();
-        if(!text.val()){
-          paragraph.text("You have to enter text in the input field");
+function stringLargerThan10Chars(arrayString){
+    for(let item of array){
+        if(!item || !(isNaN(item))){
+            continue;
         }
-
-        select.after(`<option id="option1"></option>`);
-        let option1=$("#option1");
-        option1.val(`${text.val()}`);
-        option1.text(`${text.val()}`);    
-
-    })
-    text.blur(function(){
-    paragraph.text();
-    if(!text.val()){
-        paragraph.val("You have to enter text in the input field");
+        else{
+            if(item.length>10){
+                return item;
+                break;
+            }
+        }
     }
-})
+}
 
-})
-
-
-
-
-
+arrayOfString=["Hello","Beautifully","zero",7,null,"Hypothetically"];
+let result=stringLargerThan10Chars(arrayOfString);
+console.log(result);

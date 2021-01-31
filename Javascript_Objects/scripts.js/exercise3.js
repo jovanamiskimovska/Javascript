@@ -16,7 +16,7 @@ function Student(fName,lName,age){
 function showStudents(){
 let student=new Student(firstName.value,lastName.value,age.value);
 students.push(student);
-// for(let i=0;i<1;i++){
+
     ulList.innerHTML+=`<li>${firstName.value} ${lastName.value} ${age.value}</li>`
 }
 

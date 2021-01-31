@@ -5,7 +5,7 @@ let button=div1.children[4];
 let div2=document.getElementById("content")
 
 function validateName(fName,lName,fLength,lLength){
-if(fName.length>fLength && lName.length>lLength){
+if(fName.length>=fLength && lName.length>=lLength){
     div2.textContent=`Hello ${inputFName.value} ${inputLName.value}`;
 }
 else{

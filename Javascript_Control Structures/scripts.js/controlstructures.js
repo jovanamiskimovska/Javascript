@@ -112,5 +112,8 @@ switch ((year - 4) % 12) {
         alert("PIG");
         console.log("PIG");
         break;
+    default:
+        console.log("The inserted input is invalid!");
+        break;
 }
 

@@ -14,8 +14,10 @@ function arrayNumbers(array) {
             }
         }
     }
-    console.log(`ODD array ${oddArray}`);
-    console.log(`Even array ${evenArray}`);
+    return{
+        oddArray,
+        evenArray
+    };
 }
 
 arrayNumbers([5, 5, 7, 6,null, 7, 9, 10]);

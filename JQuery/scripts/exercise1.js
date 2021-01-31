@@ -8,9 +8,10 @@ $(document).ready(function(){
 
     button.click(function(){
         console.log(text.val());
+        $("h1").remove();
         button.after(`<h1>Hello there: ${text.val()}</h1>`)
-        text.css("color","red");
-        $("h1").css("color","blue");
+        text.css("color","red"); 
+        $("h1").css("color","blue");  
     })
 })
 

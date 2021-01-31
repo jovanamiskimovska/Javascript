@@ -21,7 +21,7 @@ var quantity=30;
 var price=119.95;
 var rate=5/100;
 var phonePrice=price*rate;
-var fullPrice=phonePrice*quantity;
+var fullPrice=(phonePrice+rate)*quantity;
 
 document.write("<br> <br>The price of one phone with the 5% tax calculated is: " + phonePrice + " $" + "<br> The full price for all the 30 phones with the tax calculated is: "+ fullPrice +" $");
 

@@ -1,14 +1,25 @@
-function Animal(n,k){
-    this.name=n;
-    this.kind=k;
+function Animal(name,kind){
+    this.name=name;
+    this.kind=kind;
     this.speak=function(string) {
         console.log(`${(this.kind).toUpperCase()} ${(this.name).toUpperCase()} says: ${string}`);
     }
 }
+function getNameAndKind(nameAnimal, kindAnimal){
+    if(!nameAnimal || !kindAnimal){
+        console.log("You have to enter values in both of the input fields!");
+    }
+    else if(!isNaN(nameAnimal) || !(isNaN(kindAnimal))){
+        console.log("The animal name and kind should be a string!");
+    }
+    else{
+        return nameAnimal,kindAnimal;
+    }
+}
 
-let animalName=prompt("Enter the name of the animal");
-let animalKind=prompt("Enter the kind of the animal");
+let animalName=document.getElementById("name").value;
+let animalKind=document.getElementById("kind").value;
 
-let userAnimal=new Animal(animalName,animalKind);
+let userAnimal=new Animal(getNameAndKind(animalName,animalKind));
 console.log(userAnimal);
 userAnimal.speak("Hello I am an animal and I can speak, can you imagine that?!");
