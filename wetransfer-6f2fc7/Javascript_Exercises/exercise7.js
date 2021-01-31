@@ -5,13 +5,14 @@ $(document).ready(function(){
     let perimeterButton=$("#getPerimeter");
     let paragraph=$("#paragraph");
     let pi=3.14;
+    let circle;
 
     button.click(function(){
         if(!circleRadius.val()){
             return;
         }
         else{
-        let circle={
+        circle={
             radius:circleRadius.val(),
             getArea:function(){
                 return this.radius*this.radius*pi;

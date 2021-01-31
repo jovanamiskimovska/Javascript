@@ -2,24 +2,21 @@ $(document).ready(function(){
     let text=$("#text");
     let button=$("#button");
     let select=$(".selectOptions");
-    select.after("<p id='paragraph'></p>");
-    let paragraph=$("#paragraph");
 
-    
     button.click(function() {
-        paragraph.text();
         if(!text.val()){
-          paragraph.text("You have to enter text in the input field");
+            $("h2").remove();
+        select.after("<h2>You have to enter text in the input field</h2>");
+        }
+        else{
+        select.append(`<option id="option1">${text.val()}</option>`);
+         option1.val(`${text.val()}`);    
         }
 
-        select.after(`<option id="option1"></option>`);
-        let option1=$("#option1");
-        option1.val(`${text.val()}`);
-        option1.text(`${text.val()}`);    
-
     })
+
     text.blur(function(){
-    paragraph.text();
+    select.after.remove();
     if(!text.val()){
         paragraph.val("You have to enter text in the input field");
     }

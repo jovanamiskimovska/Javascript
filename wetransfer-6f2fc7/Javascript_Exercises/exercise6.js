@@ -1,7 +1,7 @@
 $(document).ready(function(){
 let height=$("#height");
 let width=$("#width");
-let button=("#button");
+let button=$("#button");
 let paragraph=$("#paragraph");
 
 function calculateRectangleArea(sideA,sideB){
@@ -15,18 +15,18 @@ function calculateRectanglePerimeter(sideA,sideB){
     }
 
 button.click(function(){
-    if (isNaN(height) || height===true || height===false || isNaN(width) || width===true || width===false ){
-       paragraph.text("At least one of the inputs is not a number") 
+    if (!height.val() || !width.val()){
+       paragraph.text("You have to enter both height and width of the rectangle") 
     }
     else{
-        let resultArea=calculateRectangleArea(parseFloat(height),parseFloat(width));
+        let resultArea=calculateRectangleArea(parseFloat(height.val()),parseFloat(width.val()));
         paragraph.text(`${resultArea}`);
     }
     paragraph.mouseover(function(){
-        let resultPerimeter=calculateRectanglePerimeter(parseFloat(height),parseFloat(width));
+        let resultPerimeter=calculateRectanglePerimeter(parseFloat(height.val()),parseFloat(width.val()));
         paragraph.text(`${resultPerimeter}`);
         paragraph.css("color","red");
-        paragraph.css("font-size","bold");
+        paragraph.css("font-size","70px");
     })
     
 })

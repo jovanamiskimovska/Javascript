@@ -7,5 +7,5 @@ function sumOfSalaries(array){
 }
 
 let allPeople=[{fullName:"John Smith", job:"engineer", salary: 5000}, {fullName:"Jackie Rose", job:"vet", salary: 2500},{fullName:"Calvin Harris", job:"dj", salary: 10000}];
-let salariesSum=sumOfSalaries(people);
+let salariesSum=sumOfSalaries(allPeople);
 console.log(salariesSum);
